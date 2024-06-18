@@ -48,7 +48,7 @@ h3{
   box-shadow: 3px 3px 5px #535353, -3px -3px 5px #bdbdbd;
   border: 3px solid white;
   border-style: ridge;
-  max-height: 60vh;
+  width: 90%;
 
 
 }
