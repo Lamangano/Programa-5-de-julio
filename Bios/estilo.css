@@ -33,16 +33,22 @@ body {
   padding: 1rem 1rem 0.3rem 1rem;
 }
 
+h3{
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 2px black;
+}
 .fotos{
   text-align: center;
   align-self: center;
   padding: 1rem;
+  width: 90%;
 }
 .foto {
   box-shadow: 3px 3px 5px #535353, -3px -3px 5px #bdbdbd;
   border: 3px solid white;
   border-style: ridge;
-  width: 90%;
+  max-height: 60vh;
 
 
 }
