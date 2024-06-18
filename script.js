@@ -1,31 +1,30 @@
-let slideIndex = 0;
+let currentIndex = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const totalSlides = slides.length;
 
-function showSlides(index) {
-    const slides = document.querySelectorAll('.carousel-slide');
-    const totalSlides = slides.length;
-    const visibleSlides = 5; // Adjust to 4 if needed
-    const maxIndex = totalSlides - visibleSlides;
-
-    if (index > maxIndex) {
-        slideIndex = 0;
-    } else if (index < 0) {
-        slideIndex = maxIndex;
-    } else {
-        slideIndex = index;
-    }
-
+function updateCarousel() {
     const container = document.querySelector('.carousel-container');
-    container.style.transform = `translateX(${-slideIndex * (100 / visibleSlides)}%)`;
+    const slideWidth = slides[0].clientWidth;
+    const margin = parseInt(window.getComputedStyle(slides[0]).marginRight);
+    const containerWidth = container.clientWidth;
+    const totalWidth = slideWidth + margin;
+
+    container.style.transform = `translateX(${-(currentIndex * totalWidth)}px)`;
 }
 
 function nextSlide() {
-    showSlides(slideIndex + 1);
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
 }
 
 function prevSlide() {
-    showSlides(slideIndex - 1);
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    showSlides(slideIndex);
+// Ajustar la cantidad de imágenes visibles según el ancho de la pantalla
+window.addEventListener('resize', () => {
+    updateCarousel();
 });
+
+updateCarousel();

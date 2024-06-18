@@ -137,72 +137,76 @@ h4{
   font-family: serif;
   color: #E3FAFB;
 }
+
+
 .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 300px; /* Ajusta la altura según sea necesario */
 }
 
 .carousel-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    will-change: transform;
+  display: flex;
+  transition: transform 0.5s ease;
+  padding: 0 40px; /* Añade espacio para los botones */
 }
 
 .carousel-slide {
-    min-width: 20%; /* This makes 5 images visible at a time. Adjust to 25% for 4 images. */
-    flex-shrink: 0;
-    padding: 10px;
+  min-width: 200px; /* Ajusta el ancho de las imágenes */
+  margin: 0 15px; /* Espacio entre las imágenes */
+  box-sizing: border-box;
+
+}
+
+.carousel-slide a{
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  font-family: 'Roboto'serif;
+}
+
+.carousel-slide img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 0 8px white;
+}
+
+.carousel-slide img:hover{
+    box-shadow: 0 0 20px white;
 }
 
 .carousel-slide a {
     display: block;
-    width: 100%;
-    text-decoration: none;
-    font-size: 1.3rem;
-    font-family: Kaushan;
     text-align: center;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    padding: 0.5rem;
 }
 
-.carousel-slide img {
-    width: 80%;
-    height: 80%;
-    object-fit: cover;
-    display: block;
-    border-radius: 10px;
-}
-
-button {
+button.prev, button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
-    border: none;
     color: white;
-    font-size: 18px;
-    padding: 10px;
+    border: none;
+    padding: 20px;
     cursor: pointer;
     z-index: 1;
+    font-size: 24px; /* Aumenta el tamaño del texto */
+    width: 40px; /* Ancho del botón */
+    height: 80%; /* Altura del botón */
 }
 
-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+button.prev {
+    left: 0;
 }
 
-.prev {
-    left: 10px;
+button.next {
+    right: 0;
 }
-
-.next {
-    right: 10px;
-}
-
 
 p, h2 {
   font-size: 1rem;
@@ -216,12 +220,13 @@ p, h2 {
 
 h3{
   text-align: center;
-  text-shadow: 0 0 0.2rem white;
+  text-shadow: 0 0 6px white;
 }
 
-.agradecimientos{
-  border: ridge;
-  background-color: rgba(255, 255, 255, 0.2);
+.Agradecimientos {
+  /*border: ridge;*/
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 3;
 }
 
 .footer {
@@ -232,8 +237,10 @@ h3{
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
   height: 15vh; /* Ajusta la altura según necesites */
+  width: 100%;
 }
 
 footer img {
+
   height: 100%; /* Ajusta la altura de la imagen para que se ajuste al contenedor */
 }
