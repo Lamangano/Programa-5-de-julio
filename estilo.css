@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  overflow-x: hidden; /* Evita desplazamiento horizontal */
+}
+
+.background-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Asegura que el contenedor ocupe al menos la altura de la ventana */
+  overflow: hidden;
+  z-index: 0;
+}
+
+.background-container::before {
+  content: '';
+  display: block;
+  position: fixed; /* Fija la imagen al fondo */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5; /* Ajusta la opacidad */
+  background-image: url('IMG/background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1; /* Asegura que el fondo esté detrás de todo el contenido */
+}
+
+.animate__animated {
+  padding: 1rem 1rem 0.3rem 1rem;
+}
+
+header ul {
+  display: flex;
+  align-items: left;
+  z-index: 1;
+  list-style-type: none;
+}
+
+header ul li {
+  padding-left: 1rem;
+}
+
+header a {
+  color: rgb(153, 153, 255);
+  font-family: 'Kaushan Script';
+  text-decoration: none;
+}
+
+header ul a:hover {
+  transition: ease-in-out;
+  transition: 0.5s;
+  font-size: 1.1rem;
+  color: rgb(255, 255, 255);
+}
+
+#chico {
+  font-size: 0.9rem;
+  align-self: center;
+  text-align: left;
+}
+
+.nav1 li {
+  z-index: 3;
+  list-style-type: none;
+  font-family: 'Kaushan Script', cursive;
+  text-shadow: 2px 2px 4px rgb(45, 5, 50);
+  text-align: center;
+}
+
+.nav1 ul a {
+  z-index: 1;
+  padding: 0.8rem 0rem;
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 1.2rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.nav1 ul a:hover {
+  transition: ease-in-out;
+  min-width: 80%;
+  transition: 0.5s;
+  text-align: center;
+  font-size: 1.6rem;
+  background-color: rgba(51, 51, 51, 0.3); /* Usar rgba para opacidad */
+  color: rgb(255, 255, 255);
+  box-shadow: 0.3rem 0.3rem 1rem 0.3rem rgb(179, 179, 179);
+}
+/*
+.nos ul{
+  display: flex;
+
+}
+/* Estilo para el elemento de la lista
+.menu-item {
+  position: relative;
+}
+
+/* Estilo para el menú desplegable, inicialmente oculto
+.dropdown-menu {
+  display: none;
+  position: absolute;
+}
+
+/* Estilo para mostrar el menú cuando se pasa el mouse sobre el elemento de la lista
+.menu-item:hover .dropdown-menu {
+  display: block;
+}
+*/
+* {
+    box-sizing: border-box;
+}
+
+/*body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}*/
+
+hr{
+  width: 50%;
+  align-self: auto;
+  box-shadow: 0 1px rgb(14, 14, 14, 0.2);
+}
+h4{
+  font-size: 1.6rem;
+  font-family: serif;
+  color: #E3FAFB;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.carousel-slide {
+    min-width: 20%; /* This makes 5 images visible at a time. Adjust to 25% for 4 images. */
+    flex-shrink: 0;
+    padding: 10px;
+}
+
+.carousel-slide a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: Kaushan;
+    text-align: center;
+    color: white;
+}
+
+.carousel-slide img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+p, h2 {
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  color: #FFFFFF;
+  position: relative; /* Asegúrate de que el texto y los enlaces estén posicionados relativamente */
+  z-index: 1; /* Texto y enlaces con z-index alto */
+}
+
+h3{
+  text-align: center;
+}
