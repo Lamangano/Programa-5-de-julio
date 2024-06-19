@@ -136,6 +136,8 @@ h4{
   font-size: 1.6rem;
   font-family: serif;
   color: #E3FAFB;
+  text-shadow: 1px 1px 1px black;
+  padding-left: 10px;
 }
 
 
