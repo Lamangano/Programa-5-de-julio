@@ -35,7 +35,7 @@ body {
 
 a:hover {
   color: #9299EE;
-  font-size: 1.1rem;
+  font-size: 1.8rem;
 }
 
 h1 {
@@ -65,7 +65,27 @@ a {
   font-family: Merienda;
   font-weight: bold;
   padding: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   text-decoration: none;
 
+}
+
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2; /* Asegura que el footer tenga un z-index mayor que el fondo */
+  position: relative; /* Asegura que el footer se posicione correctamente */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 15vh; /* Ajusta la altura según necesites */
+  width: 100%;
+}
+
+footer img {
+
+/*  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al contenedor */
+  width: 90%;
+  max-height: 90%;
+  object-fit: cover;
 }
