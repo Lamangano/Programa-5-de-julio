@@ -224,7 +224,7 @@ p, h2 {
 
 h3{
   text-align: center;
-  text-shadow: 0 0 6px white;
+  text-shadow: 1px 1px 2px white;
 }
 
 .Agradecimientos {
@@ -232,6 +232,35 @@ h3{
   background-color: rgba(255, 255, 255, 0.1);
   z-index: 3;
 }
+
+.chivos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 15vh;
+  z-index: 2;
+  position: relative;
+  width: 98%;
+}
+
+.chivos img {
+  width: 30%;
+  height: 100%;
+  object-fit: contain; /* Ajusta las imágenes al contenedor respetando la relación de aspecto */
+  align-self: center;
+  padding: 1px;
+}
+
+/* Consulta de medios para pantallas mayores de 850px */
+@media (min-width: 850px) {
+  .chivos img {
+    width: auto; /* Permite que las imágenes mantengan su ancho original */
+    max-width: 30%; /* Asegura que las imágenes no superen el 30% del ancho del contenedor */
+    max-height: 15vh; /* Asegura que las imágenes no superen el 100% de la altura del contenedor */
+  }
+}
+
+
 
 .footer {
   background-color: rgba(0, 0, 0, 0.7);
@@ -246,5 +275,8 @@ h3{
 
 footer img {
 
-  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al contenedor */
+/*  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al contenedor */
+  width: 90%;
+  max-height: 90%;
+  object-fit: cover;
 }
