@@ -236,7 +236,7 @@ h3{
 .chivos {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   max-height: 15vh;
   z-index: 2;
   position: relative;
